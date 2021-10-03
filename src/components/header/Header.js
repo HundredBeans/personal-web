@@ -9,8 +9,8 @@ import { HEADER_HEIGHT } from '../../helpers/constants';
 export const Header = () => {
   const NAV_ITEMS = [
     {
-      text: 'About',
-      href: '/about'
+      text: 'Home',
+      href: '/'
     },
     {
       text: 'Projects',
@@ -36,7 +36,7 @@ export const Header = () => {
   ];
 
   return (
-    <Box as="header" position="fixed" width="100%" backdropFilter="blur(10px)" zIndex="9999">
+    <Box as="header" position="fixed" width="100%" backdropFilter="blur(10px)">
       <Flex
         as="nav"
         marginInline="auto"
