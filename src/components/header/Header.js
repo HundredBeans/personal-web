@@ -1,13 +1,50 @@
 import React from 'react';
-import { Flex, Box, Spacer, Text, HStack, Divider, Button } from '@chakra-ui/react';
+import { Flex, Box, Spacer, Text, HStack, Divider } from '@chakra-ui/react';
+import { FaEnvelope, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { NavItem } from './NavItem';
-import { NavLogo } from './NavLogo';
+import { SocialMediaLinks } from './SocialMediaLinks';
+import { HEADER_HEIGHT } from '../../helpers/constants';
+// import { NavLogo } from './NavLogo';
 
 export const Header = () => {
+  const NAV_ITEMS = [
+    {
+      text: 'About',
+      href: '/about'
+    },
+    {
+      text: 'Projects',
+      href: '/projects'
+    }
+  ];
+  const SOCIAL_MEDIAS = [
+    {
+      name: 'Email',
+      icon: FaEnvelope,
+      href: 'mailto:gm.daffa100@gmail.com'
+    },
+    {
+      name: 'LinkedIn',
+      icon: FaLinkedinIn,
+      href: 'https://www.linkedin.com/in/mohammad-daffa/'
+    },
+    {
+      name: 'Github',
+      icon: FaGithub,
+      href: 'https://github.com/hundredbeans'
+    }
+  ];
+
   return (
     <Box as="header" position="fixed" width="100%" backdropFilter="blur(10px)" zIndex="9999">
-      <Flex as="nav" marginInline="auto" padding="4" justifyContent="center" alignContent="center">
-        <NavLogo />
+      <Flex
+        as="nav"
+        marginInline="auto"
+        padding="4"
+        justifyContent="center"
+        alignContent="center"
+        height={HEADER_HEIGHT}>
+        {/* <NavLogo /> */}
         <Spacer />
         <HStack spacing="24px">
           <HStack
@@ -16,19 +53,14 @@ export const Header = () => {
             alignItems="center"
             fontWeight="bold"
             spacing="24px">
-            <NavItem href="/about">
-              <Text>About</Text>
-            </NavItem>
-            <NavItem href="/projects">
-              <Text>Projects</Text>
-            </NavItem>
+            {NAV_ITEMS.map((item) => (
+              <NavItem key={item.text} href={item.href}>
+                <Text>{item.text}</Text>
+              </NavItem>
+            ))}
           </HStack>
           <Divider orientation="vertical" />
-          <HStack display="flex" justifyContent="center" alignItems="center" spacing="24px">
-            <NavItem href="/contact">
-              <Button variant="outline">CONTACT</Button>
-            </NavItem>
-          </HStack>
+          <SocialMediaLinks socialMedias={SOCIAL_MEDIAS} />
         </HStack>
       </Flex>
     </Box>
