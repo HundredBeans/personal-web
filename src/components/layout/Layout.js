@@ -8,9 +8,7 @@ export const AppLayout = ({ children }) => {
     <Box>
       <ColorModeSwitcher position="fixed" bottom="15" left="15" />
       <Header></Header>
-      <Container maxW="container.xl" paddingTop="100px">
-        {children}
-      </Container>
+      <Container maxW="container.xl">{children}</Container>
     </Box>
   );
 };
