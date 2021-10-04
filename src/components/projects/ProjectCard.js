@@ -10,17 +10,15 @@ import {
   ModalHeader,
   ModalOverlay,
   Text,
-  useColorModeValue,
   useDisclosure,
   VStack
 } from '@chakra-ui/react';
 
 const ProjectModal = ({ isOpen, onClose, title, content }) => {
-  const modalColor = useColorModeValue('black', 'white');
   return (
     <Modal onClose={onClose} isOpen={isOpen} scrollBehavior="inside" isCentered>
       <ModalOverlay />
-      <ModalContent maxWidth="600" color={modalColor}>
+      <ModalContent maxWidth="600">
         <ModalHeader>{title}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>{content}</ModalBody>
