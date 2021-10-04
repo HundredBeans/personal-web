@@ -8,6 +8,12 @@ const breakpoints = createBreakpoints({
   xl: '80em'
 });
 
+const modalStyle = {
+  baseStyle: (props) => ({
+    dialog: { bg: mode('white', '#121212')(props) }
+  })
+};
+
 const theme = extendTheme({
   styles: {
     global: (props) => ({
@@ -18,6 +24,9 @@ const theme = extendTheme({
         transition: '0.5s ease'
       }
     })
+  },
+  components: {
+    Modal: modalStyle
   },
   breakpoints
 });
