@@ -1,11 +1,8 @@
-import { Box, Button, Collapse, SimpleGrid, Text } from '@chakra-ui/react';
+import { SimpleGrid, Text } from '@chakra-ui/react';
 import { SiPython, SiGithub, SiHeroku, SiFlask, SiTwitter } from 'react-icons/si';
 import { IconLink } from '../../components/IconLink';
-import Image from 'next/image';
-import { useState } from 'react';
 
 export const MarziContent = () => {
-  const [showGif, setShowGif] = useState(false);
   return (
     <>
       <Text fontFamily="heading" fontSize="lg" fontWeight="semibold">
@@ -46,16 +43,6 @@ export const MarziContent = () => {
           url="https://twitter.com/BotMarzi"
         />
       </SimpleGrid>
-      <br />
-      <Box textAlign="center">
-        <Button textAlign="center" onClick={() => setShowGif(!showGif)}>
-          {!showGif ? 'Show GIF Demo' : 'Hide GIF Demo'}
-        </Button>
-        <br />
-        <Collapse in={showGif}>
-          <Image src="/marzi.GIF" alt="Marzi Demo" width={500} height={700} />
-        </Collapse>
-      </Box>
     </>
   );
 };
