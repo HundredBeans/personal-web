@@ -6,6 +6,7 @@ import { ProjectList } from '../../components/projects/ProjectList';
 import { InvitreeContent } from '../../content/projects/InvitreeContent';
 import { MarziContent } from '../../content/projects/MarziContent';
 import { TukulsaContent } from '../../content/projects/TukulsaContent';
+import Head from 'next/head';
 
 const Index = () => {
   const projectList = [
@@ -28,6 +29,9 @@ const Index = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Author&apos;s Projects • Hundred Beans</title>
+      </Head>
       <OffsetHeader />
       <Container>
         <Hero headingText="Personal Projects" textChildren="These are my 'finished' projects">

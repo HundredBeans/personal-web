@@ -1,5 +1,6 @@
 import { Container } from '@chakra-ui/react';
 import { Hero } from '../components/Hero';
+import Head from 'next/head';
 
 const Index = () => {
   const TextChildren = () => (
@@ -9,9 +10,14 @@ const Index = () => {
     </>
   );
   return (
-    <Container>
-      <Hero headingText="Hello There!" textChildren={<TextChildren />} height="100vh"></Hero>
-    </Container>
+    <>
+      <Head>
+        <title>Author&apos;s Home • Hundred Beans</title>
+      </Head>
+      <Container>
+        <Hero headingText="Hello There!" textChildren={<TextChildren />} height="100vh"></Hero>
+      </Container>
+    </>
   );
 };
 
