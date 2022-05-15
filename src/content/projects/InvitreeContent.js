@@ -3,15 +3,16 @@ import { FaGlobe } from 'react-icons/fa';
 import {
   SiFirebase,
   SiGithub,
-  SiNuxtDotJs,
-  SiVuetify,
-  SiNodeDotJs,
+  SiNuxtdotjs,
+  SiNodedotjs,
   SiReact,
   SiGoogleanalytics,
-  SiGooglecloud,
+  SiVuetify,
   SiFigma,
-  SiNetlify,
-  SiInstagram
+  SiGithubactions,
+  SiTypescript,
+  SiChakraui,
+  SiVercel
 } from 'react-icons/si';
 import { IconLink } from '../../components/IconLink';
 
@@ -29,23 +30,26 @@ export const InvitreeContent = () => {
       <Text fontFamily="body">
         Invitree is a digital invitation website where user can create and view wedding invitation.
         The Invitation cover all the conventational invitation needs, it also can accept gift using
-        online payment or bank transfer.
+        online payment or bank transfer. The user can update and monitor the invitation data via
+        dashboard.
       </Text>
       <br />
       <Text fontFamily="heading" fontSize="lg" fontWeight="semibold">
         Tech Stacks & Tools:{' '}
       </Text>
-      <SimpleGrid minChildWidth="90px">
-        <IconLink textAlign="center" showText name="Firebase" icon={SiFirebase} />
-        <IconLink textAlign="center" showText name="Google Analytics" icon={SiGoogleanalytics} />
-        <IconLink textAlign="center" showText name="Cloud Run" icon={SiGooglecloud} />
-        <IconLink textAlign="center" showText name="Github" icon={SiGithub} />
-        <IconLink textAlign="center" showText name="Node.js" icon={SiNodeDotJs} />
-        <IconLink textAlign="center" showText name="Nuxt.js" icon={SiNuxtDotJs} />
+      <SimpleGrid minChildWidth="95px">
+        <IconLink textAlign="center" showText name="Typescript" icon={SiTypescript} />
+        <IconLink textAlign="center" showText name="Node.js" icon={SiNodedotjs} />
+        <IconLink textAlign="center" showText name="Nuxt.js" icon={SiNuxtdotjs} />
         <IconLink textAlign="center" showText name="Vuetify" icon={SiVuetify} />
         <IconLink textAlign="center" showText name="React" icon={SiReact} />
-        <IconLink textAlign="center" showText name="Netlify" icon={SiNetlify} />
+        <IconLink textAlign="center" showText name="Chakra UI" icon={SiChakraui} />
+        <IconLink textAlign="center" showText name="Vercel" icon={SiVercel} />
+        <IconLink textAlign="center" showText name="Firebase" icon={SiFirebase} />
         <IconLink textAlign="center" showText name="Figma" icon={SiFigma} />
+        <IconLink textAlign="center" showText name="Github" icon={SiGithub} />
+        <IconLink textAlign="center" showText name="Github Actions" icon={SiGithubactions} />
+        <IconLink textAlign="center" showText name="Google Analytics" icon={SiGoogleanalytics} />
       </SimpleGrid>
       <br />
       <Text fontFamily="heading" fontSize="lg" fontWeight="semibold">
@@ -70,9 +74,9 @@ export const InvitreeContent = () => {
         <IconLink
           textAlign="center"
           showText
-          name="Instagram"
-          icon={SiInstagram}
-          url="https://www.instagram.com/invitree.id/"
+          name="Status Page"
+          icon={FaGlobe}
+          url="https://status.invitree.id"
         />
       </SimpleGrid>
     </>

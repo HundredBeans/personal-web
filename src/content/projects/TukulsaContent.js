@@ -5,7 +5,7 @@ import {
   SiFlask,
   SiGithub,
   SiLine,
-  SiMaterialUi,
+  SiMaterialui,
   SiMysql,
   SiPython,
   SiReact,
@@ -46,7 +46,7 @@ export const TukulsaContent = () => {
         <IconLink textAlign="center" showText name="My SQL" icon={SiMysql} />
         <IconLink textAlign="center" showText name="LINE Liff" icon={SiLine} />
         <IconLink textAlign="center" showText name="React" icon={SiReact} />
-        <IconLink textAlign="center" showText name="Material UI" icon={SiMaterialUi} />
+        <IconLink textAlign="center" showText name="Material UI" icon={SiMaterialui} />
       </SimpleGrid>
       <br />
       <Text fontFamily="heading" fontSize="lg" fontWeight="semibold">

@@ -3,22 +3,30 @@ import { Fragment } from 'react';
 import { OffsetHeader } from '../../components/header/OffsetHeader';
 import { Hero } from '../../components/Hero';
 import { ProjectList } from '../../components/projects/ProjectList';
-import { InvitreeContent } from '../../content/projects/InvitreeContent';
-import { MarziContent } from '../../content/projects/MarziContent';
-import { TukulsaContent } from '../../content/projects/TukulsaContent';
+import {
+  InvitreeContent,
+  MarziContent,
+  TukulsaContent,
+  YoutubeChatDataset
+} from '../../content/projects';
 import Head from 'next/head';
 
 const Index = () => {
   const projectList = [
     {
-      title: 'Tukulsa',
-      description: 'Tukulsa is an online chatbot for pulsa payment inside LINE Chat.',
-      content: <TukulsaContent />
-    },
-    {
       title: 'Invitree.id',
       description: 'Invitree is a web-based invitation ecosystem.',
       content: <InvitreeContent />
+    },
+    {
+      title: 'Livechat Dataset',
+      description: 'Scrape Youtube Livechat data and save it to firestore database.',
+      content: <YoutubeChatDataset />
+    },
+    {
+      title: 'Tukulsa',
+      description: 'Tukulsa is an online chatbot for pulsa payment inside LINE Chat.',
+      content: <TukulsaContent />
     },
     {
       title: 'Bot Marzi',
