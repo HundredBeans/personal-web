@@ -44,7 +44,7 @@ export const ProjectCard = ({ title, description, content, ...boxProps }) => {
         {...boxProps}
         onClick={onOpen}>
         <VStack textAlign="left" alignItems="start" width="100%">
-          <Heading width="250px">{title}</Heading>
+          <Heading minWidth="250px">{title}</Heading>
           <Text>{description}</Text>
         </VStack>
       </Box>
